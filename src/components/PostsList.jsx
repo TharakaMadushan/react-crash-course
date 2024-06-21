@@ -27,14 +27,6 @@ function PostsList() {
   //   fetchPosts();
   // }, []);
 
-  function addPostHandler(postData) {
-    fetch("http://localhost:8080/posts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(postData),
-    });
-    setPosts((existingPost) => [postData, ...existingPost]);
-  }
   return (
     <>
       {posts.length > 0 && (
